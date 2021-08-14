@@ -7,6 +7,7 @@ class CountdownTimer {
       hrRef: document.querySelector('[data-value="hours"]'),
       minRef: document.querySelector('[data-value="mins"]'),
       secRef: document.querySelector('[data-value="secs"]'),
+      body: document.querySelector('.body'),
     };
   }
 
@@ -24,6 +25,8 @@ class CountdownTimer {
       this.refs.minRef.textContent = min < 10 ? `0${min}` : min;
       this.refs.secRef.textContent = sec < 10 ? `0${sec}` : sec;
       //< 10 ? `0${sec}`c - для того чтобы писалось 01, 02 ...
+      this.refs.body.style.color = 'blue';
+      this.refs.body.style.backgroundColor = 'pink';
     }, 1000);
   }
 }
